@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haikyu!!</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .manga-content {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .manga-image {
+            flex: 1;
+            text-align: left;
+        }
+
+        .manga-image img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .manga-description {
+            flex: 1;
+            padding-left: 100px;
+        }
+
+        .description-header {
+            background-color: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 3px;
+            display: inline-block;
+            color: black;
+        }
+
+        .manga-details {
+            margin-top: 20px;
+        }
+
+        .manga-chapters {
+            margin-top: 20px;
+        }
+
+        .manga-chapters ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .manga-chapters li {
+            margin-bottom: 5px;
+        }
+
+        .manga-chapters a {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        .manga-chapters a:hover {
+            text-decoration: underline;
+        }
+
+        .manga-buttons button {
+            padding: 8px 15px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .manga-buttons{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .add-to-cart-button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .rating {
+            font-size: 2em;
+            color: gold;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .star {
+            display: inline-block;
+        }
+
+        .buy-now-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-search">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+            <button class="login-button">Login</button>
+            <button class="register-button">Register</button>
+        </div>
+    </header>
+
+    <nav class="main-menu">
+        <img id="logo" src="../assets/images/logo.png" alt="TriniMangaTards Logo" class="logo">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="popular.html">Popular</a></li>
+            <li><a href="new_releases.html">New Releases</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>Haikyu!!</h1>
+        <div class="rating">
+            <span class="star" data-rating="1">☆</span>
+            <span class="star" data-rating="2">☆</span>
+            <span class="star" data-rating="3">☆</span>
+            <span class="star" data-rating="4">☆</span>
+            <span class="star" data-rating="5">☆</span>
+            <p>Average Rating: <span id="average-rating">0</span></p>
+        </div>
+        <div class="manga-content">
+            <div style="text-align: center;">
+                <p style="font-style: italic;">Completed</p>
+                <div class="manga-image">
+                    <img src="../assets/images/Haikyuu.jpg" alt="Haikyu!!">
+                </div>
+            </div>
+            <div class="manga-description">
+                <h3 class="description-header">Description</h3>
+                <p>Haikyu!! follows Shoyo Hinata, a short but determined student, as he joins his high school's volleyball team. He dreams of becoming a volleyball ace, like his idol, the "Little Giant."</p>
+                <div class="manga-details">
+                    <p><strong>Author:</strong> Haruichi Furudate</p>
+                    <p><strong>Published:</strong> February 20, 2012 - July 20, 2020</p>
+                    <p><strong>Genres:</strong> Comedy, Drama, School, Shounen, Sports</p>
+                    <p><strong>Magazines:</strong> Weekly Shōnen Jump</p>
+                </div>
+            </div>
+        </div>
+        <button class="buy-now-button">Buy Now</button>
+        <div class="manga-buttons">
+            <button>Start Reading</button>
+            <button>Bookmark</button>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="manga-chapters">
+            <h3>Chapters</h3>
+            <ul>
+                <li><a href="#">Chapter 1: The Endings and Beginnings</a></li>
+                <li><a href="#">Chapter 2: Karasuno High School Volleyball Team</a></li>
+                <li><a href="#">Chapter 3: The Formidable Ally</a></li>
+                <li><a href="#">Chapter 4: The View from the Summit</a></li>
+                <li><a href="#">Chapter 5: The Anxious Losers</a></li>
+                <li><a href="#">Chapter 6: Interesting Team</a></li>
+                <li><a href="#">Chapter 7: The Absolute Champions</a></li>
+                <li><a href="#">Chapter 8: The Challenger</a></li>
+                <li><a href="#">Chapter 9: The Ace's Pride</a></li>
+                <li><a href="#">Chapter 10: Gears</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-address">
+                <p>#332, S.S Erin Road</p>
+                <p>Trinidad & Tobago</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook" class="social-icon"></a>
+                <a href="#" target="_blank"><img src="../assets/images/instagram.png" alt="Instagram" class="social-icon"></a>
+            </div>
+            <div class="footer-right">
+                <a href="#">Contact Us</a>
+                <a href="#">Terms of service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="rating.js"></script>
+</body>
+</html>

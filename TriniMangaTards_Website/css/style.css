@@ -1,0 +1,286 @@
+body {
+    background: url("../assets/images/background.png") no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #FFFFFF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+
+header {
+    background-color: rgba(100, 0, 0, 0.8);
+    color: #FFFFFF;
+    padding: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.main-menu {
+    background-color: rgba(100, 0, 0, 0.8);
+    color: #FFFFFF;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-menu .logo {
+    width: 130px;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.main-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+}
+
+.main-menu li {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.main-menu li a {
+    font-weight: bold;
+    color: white;
+    font-size: 16px;
+}
+
+main {
+    padding: 20px;
+    margin-left: 190px;
+}
+
+.banner {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/images/banner_pic.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 40px;
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.1em;
+    padding: 0 20px;
+}
+
+.manga-section {
+    margin-bottom: 20px;
+}
+
+.manga-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+}
+
+.manga-item {
+    text-align: center;
+    min-width: 150px;
+    transition: background-color 0.3s ease; /* Added transition */
+}
+
+.manga-item a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.manga-item img {
+    width: 150px;
+    height: 210px;
+    object-fit: cover;
+}
+
+.see-all {
+    display: block;
+    margin-top: 20px;
+    text-align: right;
+    color: #FFFFFF;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-address,
+.footer-social,
+.footer-right {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.footer-social img.social-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+.footer-right a {
+    color: white;
+    margin: 0 10px;
+}
+
+footer p {
+    margin-top: 20px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .content-container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .manga-list {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .manga-item {
+        min-width: 40%;
+    }
+
+    .banner {
+        height: 200px;
+    }
+
+    .banner h2 {
+        font-size: 1.5em;
+    }
+
+    .banner p {
+        font-size: 1em;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-address,
+    .footer-social,
+    .footer-right {
+        text-align: center;
+    }
+}
+
+.header-search {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header-search input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.header-search button {
+    padding: 8px 15px;
+    background-color: rgba(100, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.header-search button:hover {
+    background-color: rgba(100, 0, 0, 1);
+}
+
+header {
+    position: relative;
+}
+
+.login-button {
+    padding: 8px 15px;
+    background-color: rgba(100, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.login-button:hover {
+    background-color: rgba(100, 0, 0, 1);
+}
+
+.register-button {
+    padding: 8px 15px;
+    background-color: rgba(100, 0, 0, 0.8);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+register-button:hover {
+    background-color: rgba(100, 0, 0, 1);
+}
+
+.manga-item:hover {
+    background-color: #333; /* Darker background color on hover */
+    color: white; /* Optional: Change text color to white for better contrast */
+}
+
+.manga-item:hover h3 {
+    color: white; /*if h3 is not changing color*/
+}
+
+.manga-item:hover a {
+    color: white; /*if a is not changing color*/
+}

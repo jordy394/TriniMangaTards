@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attack on Titan</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .manga-content {
+            display: flex;
+            align-items: flex-start;
+            padding: 20px;
+        }
+
+        .manga-image {
+            flex: 1;
+            text-align: left;
+        }
+
+        .manga-image img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .manga-description {
+            flex: 1;
+            padding-left: 100px;
+        }
+
+        .description-header {
+            background-color: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 3px;
+            display: inline-block;
+            color: black;
+        }
+
+        .manga-details {
+            margin-top: 20px;
+        }
+
+        .manga-chapters {
+            margin-top: 20px;
+        }
+
+        .manga-chapters ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .manga-chapters li {
+            margin-bottom: 5px;
+        }
+
+        .manga-chapters a {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        .manga-chapters a:hover {
+            text-decoration: underline;
+        }
+
+        .manga-buttons button {
+            padding: 8px 15px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .manga-buttons{
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .add-to-cart-button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 5px;
+        }
+
+        .rating {
+            font-size: 2em;
+            color: gold;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .star {
+            display: inline-block;
+        }
+
+        .buy-now-button {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-search">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+            <button class="login-button">Login</button>
+            <button class="register-button">Register</button>
+        </div>
+    </header>
+
+    <nav class="main-menu">
+        <img id="logo" src="../assets/images/logo.png" alt="TriniMangaTards Logo" class="logo">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="#">Popular</a></li>
+            <li><a href="#">New Releases</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <h1>Attack on Titan</h1>
+        <div class="rating">
+            <span class="star" data-rating="1">☆</span>
+            <span class="star" data-rating="2">☆</span>
+            <span class="star" data-rating="3">☆</span>
+            <span class="star" data-rating="4">☆</span>
+            <span class="star" data-rating="5">☆</span>
+            <p>Average Rating: <span id="average-rating">0</span></p>
+        </div>
+        <div class="manga-content">
+            <div style="text-align: center;">
+                <p style="font-style: italic;">Completed</p>
+                <div class="manga-image">
+                    <img src="../assets/images/Attack_On_Titan.jpg" alt="Attack on Titan">
+                </div>
+            </div>
+            <div class="manga-description">
+                <h3 class="description-header">Description</h3>
+                <p>Attack on Titan is set in a world where humanity lives inside enormous walls to protect themselves from the gigantic humanoid Titans. The story follows Eren Yeager, his friends, and the Survey Corps as they battle the Titans and uncover the mysteries behind their existence.</p>
+                <div class="manga-details">
+                    <p><strong>Author:</strong> Hajime Isayama</p>
+                    <p><strong>Published:</strong> September 9, 2009 - April 9, 2021</p>
+                    <p><strong>Genres:</strong> Action, Dark Fantasy, Post-apocalyptic</p>
+                    <p><strong>Magazines:</strong> Bessatsu Shōnen Magazine</p>
+                </div>
+            </div>
+        </div>
+        <a href="../pages/buy_now.html?title=Attack%20on%20Titan&price=25.00&image=../assets/images/Attack_On_Titan.jpg">
+            <button class="buy-now-button">Buy Now</button>
+        </a>
+        <div class="manga-buttons">
+            <button>Start Reading</button>
+            <button>Bookmark</button>
+            <button class="add-to-cart-button">Add to Cart</button>
+        </div>
+        <div class="manga-chapters">
+            <h3>Chapters</h3>
+            <ul>
+                <li><a href="#">Chapter 1: To You, in 2000 Years: The Fall of Shiganshina, Part 1</a></li>
+                <li><a href="#">Chapter 2: That Day</a></li>
+                <li><a href="#">Chapter 3: Dim Light Amid Despair</a></li>
+                <li><a href="#">Chapter 4: The Night of the Closing Ceremony</a></li>
+                <li><a href="#">Chapter 5: First Battle</a></li>
+                <li><a href="#">Chapter 6: The World the Girl Saw</a></li>
+                <li><a href="#">Chapter 7: Small Blade</a></li>
+                <li><a href="#">Chapter 8: Hearing the Heartbeat</a></li>
+                <li><a href="#">Chapter 9: Whereabouts of the Left Arm</a></li>
+                <li><a href="#">Chapter 10: Response</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-address">
+                <p>#332, S.S Erin Road</p>
+                <p>Trinidad & Tobago</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook" class="social-icon"></a>
+                <a href="#" target="_blank"><img src="../assets/images/instagram.png" alt="Instagram" class="social-icon"></a>
+            </div>
+            <div class="footer-right">
+                <a href="#">Contact Us</a>
+                <a href="#">Terms of service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="rating.js"></script>
+</body>
+</html>

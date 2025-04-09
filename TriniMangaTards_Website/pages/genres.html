@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manga Genres</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .genre-list {
+            padding: 20px;
+        }
+
+        .genre-list h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .genre-list ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .genre-list li {
+            background-color: #f0f0f0;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .genre-list li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+        }
+
+        .genre-list li a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-search">
+            <input type="text" id="search-input" placeholder="Search...">
+            <button id="search-button">Search</button>
+            <button class="login-button">Login</button>
+            <button class="register-button">Register</button>
+        </div>
+    </header>
+
+    <nav class="main-menu">
+        <img id="logo" src="../assets/images/logo.png" alt="TriniMangaTards Logo" class="logo">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="genres.html">Genres</a></li>
+            <li><a href="popular.html">Popular</a></li>
+            <li><a href="new_releases.html">New Releases</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content">
+        <div class="genre-list">
+            <h1>Manga Genres</h1>
+            <ul>
+                <li><a href="#">Shonen</a></li>
+                <li><a href="#">Shojo</a></li>
+                <li><a href="#">Seinen</a></li>
+                <li><a href="#">Josei</a></li>
+                <li><a href="#">Isekai</a></li>
+                <li><a href="#">Mecha</a></li>
+                <li><a href="#">Fantasy</a></li>
+                <li><a href="#">Sci-Fi</a></li>
+                <li><a href="#">Horror</a></li>
+                <li><a href="#">Romance</a></li>
+                <li><a href="#">Comedy</a></li>
+                <li><a href="#">Slice of Life</a></li>
+                <li><a href="#">Supernatural</a></li>
+                <li><a href="#">Psychological</a></li>
+                <li><a href="#">Mystery</a></li>
+                <li><a href="#">Thriller</a></li>
+                <li><a href="#">Historical</a></li>
+                <li><a href="#">Sports</a></li>
+                <li><a href="#">Harem</a></li>
+                <li><a href="#">Ecchi</a></li>
+            </ul>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-address">
+                <p>#332, S.S Erin Road</p>
+                <p>Trinidad & Tobago</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook" class="social-icon"></a>
+                <a href="#" target="_blank"><img src="../assets/images/instagram.png" alt="Instagram" class="social-icon"></a>
+            </div>
+            <div class="footer-right">
+                <a href="#">Contact Us</a>
+                <a href="#">Terms of service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

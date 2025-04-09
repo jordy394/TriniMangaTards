@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Now - TriniMangaTards</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .buy-now-container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 8px;
+            color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .product-image-container {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            border-radius: 8px;
+            aspect-ratio: 4/5;
+            object-fit: cover;
+
+        }
+
+        .form-container {
+            flex: 1;
+        }
+
+
+        .buy-now-header {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            font-size: 0.9em;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 0.9em;
+        }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="email"]:focus,
+        .form-group input[type="tel"]:focus,
+        .form-group input[type="number"]:focus {
+            border-color: #640000;
+            outline: none;
+            box-shadow: 0 0 5px rgba(100, 0, 0, 0.5);
+        }
+
+        .buy-now-button {
+            background-color: #640000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        .buy-now-button:hover {
+            background-color: #800000;
+        }
+
+        .summary-container {
+            margin-top: 0;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .summary-container h3 {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .summary-container p {
+            font-size: 0.9em;
+        }
+
+       @media (max-width: 768px) {
+            .buy-now-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .product-image-container{
+                max-width: 100%;
+            }
+            .form-container {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+    <script>
+        fetch("../header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-container").innerHTML = data;
+        });
+    </script>
+    <div id="nav-container"></div>
+    <script>
+        fetch("../nav.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("nav-container").innerHTML = data;
+        });
+    </script>
+
+    <div class="buy-now-container">
+        <div class="product-image-container">
+            <img id="manga-image" src="../assets/images/placeholder.jpg" alt="Manga Cover">
+        </div>
+        <div class="form-container">
+            <div class="buy-now-header">
+                <h2 id="manga-title-header">Buy Now</h2>
+                <p>Please fill in your details to purchase this manga.</p>
+            </div>
+            <form id="buy-now-form">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" name="quantity" value="1" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping_address">Shipping Address</label>
+                    <input type="text" id="shipping_address" name="shipping_address" required>
+                </div>
+
+                <div class="summary-container">
+                    <h3>Order Summary</h3>
+                    <p>Manga Title: <span id="manga_title_summary"></span></p>
+                    <p>Quantity: <span id="quantity_summary">1</span></p>
+                    <p>Total Price: $<span id="total_price_summary">0.00</span></p>
+                </div>
+                <button type="submit" class="buy-now-button">Place Order</button>
+            </form>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-address">
+                <p>#332, S.S Erin Road</p>
+                <p>Trinidad & Tobago</p>
+            </div>
+            <div class="footer-social">
+                <a href="#" target="_blank"><img src="../assets/images/facebook.png" alt="Facebook" class="social-icon"></a>
+                <a href="#" target="_blank"><img src="../assets/images/instagram.png" alt="Instagram" class="social-icon"></a>
+            </div>
+            <div class="footer-right">
+                <a href="contact.html">Contact Us</a>
+                <a href="#">Terms of service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const mangaTitle = urlParams.get('title');
+        const mangaPrice = urlParams.get('price');
+        const mangaImage = urlParams.get('image'); // Get the image URL
+
+        document.getElementById('manga_title_summary').textContent = mangaTitle;
+        document.getElementById('manga-title-header').textContent = mangaTitle;
+
+
+        const quantityInput = document.getElementById('quantity');
+        const quantitySummary = document.getElementById('quantity_summary');
+        const totalPriceSummary = document.getElementById('total_price_summary');
+        const mangaImageElement = document.getElementById('manga-image'); // Get the image element
+
+
+        let quantity = 1;
+        let totalPrice = parseFloat(mangaPrice);
+
+        quantityInput.addEventListener('change', (event) => {
+            quantity = parseInt(event.target.value);
+            quantitySummary.textContent = quantity;
+            totalPrice = quantity * parseFloat(mangaPrice);
+            totalPriceSummary.textContent = totalPrice.toFixed(2);
+        });
+
+        totalPriceSummary.textContent = totalPrice.toFixed(2);
+
+        if (mangaImage) {
+            mangaImageElement.src = mangaImage; // Set the image source
+        }        
+
+
+        document.getElementById('buy-now-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const shippingAddress = document.getElementById('shipping_address').value;
+
+            // Placeholder for phone code logic
+            let phoneCode = '';
+            if (mangaTitle === 'Dragon Ball') {
+                phoneCode = '+1'; // Example: USA phone code
+            } else if (mangaTitle === 'Frieren') {
+                phoneCode = '+49'; // Example: Germany phone code
+            } else if (mangaTitle === 'Jujutsu Kaisen') {
+                phoneCode = '+81'; // Example: Japan phone code
+            } else {
+                phoneCode = '+00'; // Default
+            }
+
+            alert(`
+                Order Details:
+                Manga Title: ${mangaTitle}
+                Quantity: ${quantity}
+                Total Price: $${totalPrice.toFixed(2)}
+                Name: ${name}
+                Email: ${email}
+                Phone: ${phoneCode} ${phone}  
+                Shipping Address: ${shippingAddress}
+                
+                Thank you for your purchase!
+                (Note: This is a simulation. No actual order is placed.)
+            `);
+
+            window.location.href = '../index.html';
+        });
+    </script>
+</body>
+</html>
